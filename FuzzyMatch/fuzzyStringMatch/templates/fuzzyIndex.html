@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Fuzzy String Matching</title>
+<!--
+Scripts included to support Ajax libraries
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript">
+</script> <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+<!--Auto Complete function of Ajax-->
+  <script type="text/javascript">
+    $(function() {
+      $("#word").autocomplete({
+        source: "/search/",
+        minLength: 1,
+      });
+    });
+ </script>
+
+</head>
+<body>
+<div >
+  <h3><u>Auto Complete Fuzzy Search</u></h3>
+  <br>
+  <form action= "/getResult" method= "GET">
+      <input id = "word" name="word" type="text" align="center" placeholder="Search for a Word">
+      <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
